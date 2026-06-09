@@ -1,3 +1,11 @@
 theme: jekyll-theme-minimal
 title: Yujia Zhang's homepage
 description: Bookmark this to keep an eye on my project updates!
+
+sidebar_links:
+  - name: GitHub
+    url: https://github.com/yourusername
+  - name: ORCID
+    url: https://orcid.org/0000-0000-0000-0000
+  - name: Email
+    url: mailto:you@example.com
