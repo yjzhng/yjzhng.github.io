@@ -6,11 +6,11 @@
 #   repo     – GitHub link shown with the icon at the bottom of the tile (optional)
 #   repo_name – override the text next to the GitHub icon (optional)
 
-- title: "Project One"
-  blurb: "A short description of what this project does."
+- title: "omicViz"
+  blurb: "Analysis and visualisation pipeline for high-throughput chemical proteomic and transcriptomic with multi-condition comparisons"
   section: "Biology tools"
   url:
-  repo: "https://github.com/yjzhng/project-one"
+  repo: "https://github.com/yjzhng/omicViz"
 
 - title: "Project Two"
   blurb: "Another sentence or two about this one."
