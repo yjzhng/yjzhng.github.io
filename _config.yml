@@ -28,5 +28,6 @@ defaults:
 
 exclude:
   - README.md
+  - LICENSE
 
 # Self-contained: no theme, no plugins. GitHub Pages builds it on push.

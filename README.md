@@ -4,6 +4,10 @@ My personal homepage — a small, self-contained Jekyll site (no theme gem, no
 plugins). Navbar + left sidebar + content, with an auto/light/dark toggle and
 instant tab switching. GitHub Pages builds and publishes it on push to `main`.
 
+This is a minimal version adapted from the
+[academicpages](https://github.com/academicpages/academicpages.github.io)
+template — rebuilt from scratch to keep only the navbar + sidebar layout.
+
 ## Structure
 
 | Path | Purpose |
@@ -29,3 +33,9 @@ instant tab switching. GitHub Pages builds and publishes it on push to `main`.
 
 The repo carries no build tooling. To preview locally, install Jekyll
 (`gem install jekyll`) and run `jekyll serve`.
+
+## License
+
+[MIT](LICENSE). Adapted from the
+[academicpages](https://github.com/academicpages/academicpages.github.io)
+template (© Michael Rose, MIT).
