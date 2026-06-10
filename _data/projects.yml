@@ -1,0 +1,31 @@
+# Each entry is a project tile on the PROJECTS page.
+#   title    – tile heading
+#   blurb    – one-line description
+#   section  – tiles are grouped under a heading per section (in first-seen order)
+#   url      – main click target for the tile (optional; defaults to repo)
+#   repo     – GitHub link shown with the icon at the bottom of the tile (optional)
+#   repo_name – override the text next to the GitHub icon (optional)
+
+- title: "Project One"
+  blurb: "A short description of what this project does."
+  section: "Biology tools"
+  url:
+  repo: "https://github.com/yjzhng/project-one"
+
+- title: "Project Two"
+  blurb: "Another sentence or two about this one."
+  section: "Biology tools"
+  url:
+  repo: "https://github.com/yjzhng/project-two"
+
+- title: "Project Three"
+  blurb: "A fun side project — describe it in a sentence."
+  section: "Just for fun"
+  url:
+  repo: "https://github.com/yjzhng/project-three"
+
+- title: "Project Four"
+  blurb: "Another fun experiment — a sentence about it."
+  section: "Just for fun"
+  url:
+  repo: "https://github.com/yjzhng/project-four"

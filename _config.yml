@@ -1,11 +1,32 @@
-theme: jekyll-theme-minimal
-title: My homepage
-description: Bookmark this to keep an eye on my project updates!
+# --- Site -------------------------------------------------------------------
+title: "Your Name / Site Title"
+description: "Personal homepage"
+url: "https://yjzhng.github.io"
+baseurl: ""
+lang: "en"
 
-sidebar_links:
-  - name: GitHub
-    url: https://github.com/yourusername
-  - name: ORCID
-    url: https://orcid.org/0000-0000-0000-0000
-  - name: Email
-    url: mailto:you@example.com
+# --- Sidebar author profile (see _includes/sidebar.html) --------------------
+author:
+  name: "Your Sidebar Name"
+  avatar: "profile.png"          # file in /images/
+  bio: "Short biography for the left-hand sidebar"
+  location: "Earth"
+  employer: "Red Brick University"
+  email: "none@example.org"
+  googlescholar: "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  orcid: "https://orcid.org/yourorcidurl"
+  github: "yjzhng"               # username
+  twitter: "yourhandle"          # X username, without the @
+  uri: "https://yjzhng.github.io"  # personal website (globe icon)
+
+# --- Build ------------------------------------------------------------------
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+
+# Self-contained: no theme, no plugins. GitHub Pages builds it on push.

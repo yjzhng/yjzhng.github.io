@@ -1,48 +1,31 @@
-# My projects
-Personal website (test)
+# yjzhng.github.io
 
+My personal homepage — a small, self-contained Jekyll site (no theme gem, no
+plugins). Navbar + left sidebar + content, with an auto/light/dark toggle and
+instant tab switching. GitHub Pages builds and publishes it on push to `main`.
 
-## Biology tools
-<div class="project-grid">
+## Structure
 
-  <div class="project-panel">
-    <a href="https://github.com/you/project-one">
-      <h3>Project One</h3>
-      <p>A short description of what this project does.</p>
-    </a>
-  </div>
+| Path | Purpose |
+| --- | --- |
+| `index.md` | **HOME** tab (`/`) — bio |
+| `projects.html` | **PROJECTS** tab (`/projects/`) — tiles from `_data/projects.yml` |
+| `activity.html` | **ACTIVITY** tab (`/activity/`) — social feed embed |
+| `_data/projects.yml` | the project tiles (one entry each) |
+| `_data/navigation.yml` | the three top-bar tabs |
+| `_config.yml` | site title + `author:` sidebar info |
+| `_layouts/default.html` | the page shell |
+| `_includes/` | `head`, `masthead` (navbar), `sidebar`, `footer` |
+| `assets/css/style.css` | all styling (light/dark via `prefers-color-scheme`) |
+| `assets/js/site.js` | theme toggle + instant tab-switching |
 
-  <div class="project-panel">
-    <a href="https://github.com/you/project-two">
-      <h3>Project Two</h3>
-      <p>Another sentence or two about this one.</p>
-    </a>
-  </div>
+## Editing
 
-  <div class="project-panel">
-    <a href="https://github.com/you/project-three">
-      <h3>Project Three</h3>
-      <p>Description of the third project.</p>
-    </a>
-  </div>
+- **Bio** — `index.md`; **sidebar** name/links — `author:` in `_config.yml`.
+- **Add a project** — add an entry to `_data/projects.yml`.
+- **Tabs** — `_data/navigation.yml`.
 
-</div>
+## Local preview (optional)
 
-## just for fun
-<div class="project-grid">
-
-  <div class="project-panel">
-    <a href="https://github.com/you/project-one">
-      <h3>Project One</h3>
-      <p>A short description of what this project does.</p>
-    </a>
-  </div>
-
-  <div class="project-panel">
-    <a href="https://github.com/you/project-two">
-      <h3>Project Two</h3>
-      <p>Another sentence or two about this one.</p>
-    </a>
-  </div>
-
-</div>
+The repo carries no build tooling. To preview locally, install Jekyll
+(`gem install jekyll`) and run `jekyll serve`.

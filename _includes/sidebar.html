@@ -1,0 +1,28 @@
+{% assign a = site.author %}
+<aside class="sidebar">
+  {% if a.avatar %}
+    <img class="avatar" src="{{ a.avatar | prepend: '/images/' | relative_url }}" alt="{{ a.name }}">
+  {% endif %}
+  {% if a.name %}<h2 class="author-name">{{ a.name }}</h2>{% endif %}
+  {% if a.bio %}<p class="author-bio">{{ a.bio }}</p>{% endif %}
+
+  <ul>
+    {% comment %} Group 1: location, institute, email {% endcomment %}
+    {% if a.location %}<li><i class="fa-solid fa-location-dot"></i>{{ a.location }}</li>{% endif %}
+    {% if a.employer %}<li><i class="fa-solid fa-building-columns"></i>{{ a.employer }}</li>{% endif %}
+    {% if a.email %}<li><a href="mailto:{{ a.email }}"><i class="fa-solid fa-envelope"></i>Email</a></li>{% endif %}
+
+    <li class="sep" aria-hidden="true"></li>
+
+    {% comment %} Group 2: Google Scholar, ORCID, GitHub {% endcomment %}
+    {% if a.googlescholar %}<li><a href="{{ a.googlescholar }}"><i class="ai ai-google-scholar"></i>Google Scholar</a></li>{% endif %}
+    {% if a.orcid %}<li><a href="{{ a.orcid }}"><i class="ai ai-orcid"></i>ORCID</a></li>{% endif %}
+    {% if a.github %}<li><a href="https://github.com/{{ a.github }}"><i class="fa-brands fa-github"></i>GitHub</a></li>{% endif %}
+
+    <li class="sep" aria-hidden="true"></li>
+
+    {% comment %} Group 3: X, personal website {% endcomment %}
+    {% if a.twitter %}<li><a href="https://x.com/{{ a.twitter }}"><i class="fa-brands fa-x-twitter"></i>X</a></li>{% endif %}
+    {% if a.uri %}<li><a href="{{ a.uri }}"><i class="fa-solid fa-globe"></i>Website</a></li>{% endif %}
+  </ul>
+</aside>

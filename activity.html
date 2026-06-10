@@ -1,0 +1,16 @@
+---
+title: Activity
+permalink: /activity/
+---
+<p>Recent posts from my linked social accounts.</p>
+
+{% if site.author.twitter %}
+<a class="twitter-timeline" data-height="800" data-dnt="true"
+   href="https://twitter.com/{{ site.author.twitter }}?ref_src=twsrc%5Etfw">Posts by &#64;{{ site.author.twitter }}</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% else %}
+<p><em>Set <code>author.twitter</code> in <code>_config.yml</code> to show your X feed here.</em></p>
+{% endif %}
+
+<!-- To add another platform, paste its official timeline embed here. Static
+     hosting can't aggregate feeds itself, so each one is the platform's widget. -->

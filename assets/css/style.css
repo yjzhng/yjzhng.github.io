@@ -1,0 +1,365 @@
+/* ==========================================================================
+   Self-contained styles for the personal homepage.
+   Navbar + left sidebar + content, with light/dark via prefers-color-scheme.
+   ========================================================================== */
+
+:root {
+  --maxw:        1080px;
+  --sidebar-w:   220px;
+  --gap:         56px;
+  --masthead-h:  3rem;
+
+  --bg:       #ffffff;
+  --text:     #1f2328;
+  --muted:    #5b6570;
+  --border:   #e4e8ed;
+  --accent:   #2f7f93;
+  --link:     #2f7f93;
+  --tile-bg:  #fafbfc;
+  --sep:      rgba(0, 0, 0, 0.08);
+  --shadow:   0 10px 24px rgba(31, 35, 40, 0.12);
+}
+
+/* Dark palette. Applied for an explicit dark choice, or in "auto" mode when the
+   OS prefers dark. (The two blocks below must stay in sync.) */
+:root[data-theme="dark"] {
+  --bg:       #0d1117;
+  --text:     #e6edf3;
+  --muted:    #9aa4af;
+  --border:   #2a313c;
+  --accent:   #79b8c9;
+  --link:     #79b8c9;
+  --tile-bg:  #161b22;
+  --sep:      rgba(255, 255, 255, 0.12);
+  --shadow:   0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Auto = no explicit light/dark choice (covers "auto" and no attribute). */
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    --bg:       #0d1117;
+    --text:     #e6edf3;
+    --muted:    #9aa4af;
+    --border:   #2a313c;
+    --accent:   #79b8c9;
+    --link:     #79b8c9;
+    --tile-bg:  #161b22;
+    --sep:      rgba(255, 255, 255, 0.12);
+    --shadow:   0 10px 24px rgba(0, 0, 0, 0.5);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding-top: var(--masthead-h);
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+               Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--link); }
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---- Masthead / navbar --------------------------------------------------- */
+
+.masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--masthead-h);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 20;
+}
+
+.masthead-inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.site-title {
+  width: calc(var(--sidebar-w) + var(--gap));
+  flex: none;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.tabs a {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs a:hover { color: var(--text); }
+
+.tabs a.active {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
+/* Hide focus box on mouse click, keep it for keyboard users. */
+.tabs a:focus:not(:focus-visible) { outline: none; }
+
+/* ---- Theme toggle (top-right) -------------------------------------------- */
+
+.theme-toggle {
+  margin-left: auto;
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.theme-toggle button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.theme-toggle button:hover { color: var(--text); }
+
+.theme-toggle button.active {
+  background: var(--border);
+  color: var(--text);
+}
+
+.theme-toggle button:focus:not(:focus-visible) { outline: none; }
+
+/* ---- Layout: sidebar + content ------------------------------------------- */
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2.25rem;
+  padding-bottom: 3rem;
+}
+
+.sidebar {
+  width: var(--sidebar-w);
+  margin-right: var(--gap);
+  flex: none;
+  position: sticky;
+  top: calc(var(--masthead-h) + 1.5rem);
+}
+
+.content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* ---- Sidebar (author profile) -------------------------------------------- */
+
+.sidebar .avatar {
+  display: block;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.sidebar .author-name {
+  margin: 0 0 0.15rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.sidebar .author-bio {
+  margin: 0 0 1rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  font-size: 0.88rem;
+  padding: 0.22rem 0;
+}
+
+.sidebar li a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.sidebar li a:hover { color: var(--accent); }
+
+.sidebar li i {
+  width: 1.2em;
+  margin-right: 0.5em;
+  text-align: center;
+  color: var(--muted);
+}
+
+.sidebar .sep {
+  height: 0;
+  margin: 0.7em 0.25em;
+  border-top: 1px solid var(--sep);
+}
+
+/* ---- Content typography -------------------------------------------------- */
+
+.page-title {
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.content h2 {
+  margin: 1.8rem 0 0.6rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.content p { margin: 0 0 1rem; }
+
+.content a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---- Project tiles ------------------------------------------------------- */
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.15rem;
+  background: var(--tile-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent);
+}
+
+.tile h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* Title link stretches over the whole tile (main click target), no underline */
+.tile h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.tile h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.tile p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* GitHub repo link sits at the bottom, above the stretched title link */
+.tile-repo {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  align-self: flex-start;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.tile .tile-repo,
+.tile .tile-repo:hover { text-decoration: none; }
+
+.tile-repo i { font-size: 1.1rem; flex-shrink: 0; }
+
+.tile-repo span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tile-repo:hover { color: var(--accent); }
+
+/* ---- Footer -------------------------------------------------------------- */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---- Responsive ---------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .masthead-inner { gap: 1rem; }
+  .site-title { width: auto; }
+  .layout { flex-direction: column; padding-top: 1.5rem; }
+  .sidebar {
+    position: static;
+    width: auto;
+    margin: 0 0 2rem;
+  }
+}

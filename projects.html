@@ -1,0 +1,21 @@
+---
+title: Projects
+permalink: /projects/
+---
+{% assign sections = site.data.projects | map: "section" | uniq %}
+{% for section in sections %}
+<h2>{{ section }}</h2>
+<div class="tiles">
+{% for p in site.data.projects %}{% if p.section == section %}
+  <div class="tile">
+    <h3><a href="{% if p.url %}{{ p.url }}{% else %}{{ p.repo }}{% endif %}">{{ p.title }}</a></h3>
+    <p>{{ p.blurb }}</p>
+    {% if p.repo %}
+    <a class="tile-repo" href="{{ p.repo }}" aria-label="GitHub repository for {{ p.title }}">
+      <i class="fa-brands fa-github"></i><span>{{ p.repo_name | default: p.repo | split: "/" | last }}</span>
+    </a>
+    {% endif %}
+  </div>
+{% endif %}{% endfor %}
+</div>
+{% endfor %}
