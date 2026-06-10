@@ -1,5 +1,5 @@
 # --- Site -------------------------------------------------------------------
-title: "Your Name / Site Title"
+title: "Yujia Zhang"
 description: "Personal homepage"
 url: "https://yjzhng.github.io"
 baseurl: ""
@@ -7,11 +7,11 @@ lang: "en"
 
 # --- Sidebar author profile (see _includes/sidebar.html) --------------------
 author:
-  name: "Your Sidebar Name"
+  name: "Yujia Zhang"
   avatar: "profile.png"          # file in /images/
-  bio: "Short biography for the left-hand sidebar"
-  location: "Earth"
-  employer: "Red Brick University"
+  bio: "Hello there!"
+  location: "London, UK"
+  employer: "The Francis Crick Institute"
   email: "none@example.org"
   googlescholar: "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   orcid: "https://orcid.org/yourorcidurl"
