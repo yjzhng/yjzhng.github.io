@@ -12,11 +12,11 @@
   url:
   repo: "https://github.com/yjzhng/omicViz"
 
-- title: "Project Two"
-  blurb: "Another sentence or two about this one."
+- title: "UniOme"
+  blurb: "Integrated multiome-annotation browser for prokaryotic organisms"
   section: "Biology tools"
   url:
-  repo: "https://github.com/yjzhng/project-two"
+  repo: "https://github.com/yjzhng/UniOme"
 
 - title: "Project Three"
   blurb: "A fun side project — describe it in a sentence."
