@@ -6,17 +6,23 @@
 #   repo     – GitHub link shown with the icon at the bottom of the tile (optional)
 #   repo_name – override the text next to the GitHub icon (optional)
 
-- title: "omicViz"
-  blurb: "Analysis and visualisation pipeline for high-throughput chemical proteomic and transcriptomic with multi-condition comparisons"
-  section: "Biology tools"
-  url:
-  repo: "https://github.com/yjzhng/omicViz"
-
 - title: "UniOme"
-  blurb: "Integrated multiome-annotation browser for prokaryotic organisms"
-  section: "Biology tools"
+  blurb: "Interactive browser for prokaryote genome, proteome all in one place"
+  section: "ChemBio tools"
   url:
   repo: "https://github.com/yjzhng/UniOme"
+
+- title: "ChemViewer"
+  blurb: "Light-weight chemical library viewer with basic chemoinformatic analyses"
+  section: "ChemBio tools"
+  url:
+  repo: "https://github.com/yjzhng/ChemViewer"
+
+- title: "omicViz"
+  blurb: "Analysis pipeline for chemical proteomic/transcriptomic with multi-condition comparisons"
+  section: "ChemBio tools"
+  url:
+  repo: "https://github.com/yjzhng/omicViz"
 
 - title: "Project Three"
   blurb: "A fun side project — describe it in a sentence."
