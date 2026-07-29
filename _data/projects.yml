@@ -6,32 +6,51 @@
 #   repo     – GitHub link shown with the icon at the bottom of the tile (optional)
 #   repo_name – override the text next to the GitHub icon (optional)
 
+# - title: "Comming soon"
+#   blurb: "..."
+#   section: "ChemBio tools"
+#   url:
+#   repo: "https://github.com/yjzhng/coming-soon"
+
+
 - title: "UniOme"
-  blurb: "Interactive browser for prokaryote genome, proteome all in one place"
-  section: "ChemBio tools"
+  blurb: "Open-source interactive browser for prokaryote genome, proteome all in one place"
+  section: "Biology tools"
   url:
   repo: "https://github.com/yjzhng/UniOme"
 
+- title: "OmicExplorer"
+  blurb: "Intuitive workflow editor for omic analysis and visualisation pipelines"
+  section: "Biology tools"
+  url:
+  repo: "https://github.com/yjzhng/OmicExplorer"
+
+- title: "BioGrapher"
+  blurb: "Open-source data processing and plotting app for biologists"
+  section: "Biology tools"
+  url:
+  repo: "https://github.com/yjzhng/BioGrapher"
+
+# - title: "BioViewer"
+#   blurb: "Open-source biomolecular structure viewer with useful labelling tools"
+#   section: "Biology tools"
+#   url:
+#   repo: "https://github.com/yjzhng/ChemViewer"
+
 - title: "ChemViewer"
-  blurb: "Light-weight chemical library viewer with basic chemoinformatic analyses"
-  section: "ChemBio tools"
+  blurb: "Open-source chemical library viewer with basic chemoinformatic analyses"
+  section: "Chemistry tools"
   url:
   repo: "https://github.com/yjzhng/ChemViewer"
 
-- title: "omicViz"
-  blurb: "Analysis pipeline for chemical proteomic/transcriptomic with multi-condition comparisons"
-  section: "ChemBio tools"
+- title: "ChemSketcher"
+  blurb: "Open-source chemical drawing canvas with quick physchem properties"
+  section: "Chemistry tools"
   url:
-  repo: "https://github.com/yjzhng/omicViz"
+  repo: "https://github.com/yjzhng/ChemSketcher"
 
-- title: "Project Three"
-  blurb: "A fun side project — describe it in a sentence."
-  section: "Just for fun"
-  url:
-  repo: "https://github.com/yjzhng/project-three"
-
-- title: "Project Four"
-  blurb: "Another fun experiment — a sentence about it."
-  section: "Just for fun"
-  url:
-  repo: "https://github.com/yjzhng/project-four"
+# - title: "KnwldgDB"
+#   blurb: "An app framework of interactive visual encyclopedia"
+#   section: "Just for fun"
+#   url:
+#   repo: "https://github.com/yjzhng/KnwldgDB"

@@ -3,19 +3,8 @@ title: Home
 permalink: /
 ---
 
-Write a short bio here — who you are, what you work on, and what you're
-interested in.
+Hi, this is Yujia. I am a Chemical Biology PhD student and an open-source developer. I believe in collaborative science and equal access of computational tools for every scientists in the academic community. That's why I am making analysis and productivity apps with quality-of-life features that I wished existed based on my first-hand experiences in the lab. 
 
-I'm a researcher / developer working on _your field_. My focus is on
-_what you do_, and I build tools to _solve the problem you care about_.
+I hope what I found useful is also useful to you. Check out my apps on the PROJECT page. If you like my apps, please share with your friends and colleagues. If you don't like it, get in touch and let me know, whether it's bugs or features that you are expecting. 
 
-## Background
-
-- **Now** — Your current role, Institution / Company
-- **Before** — A previous role or degree
-- **Education** — Your degree, University
-
-## Get in touch
-
-The quickest way to reach me is by [email](mailto:you@example.com), or via the
-links in the sidebar.
+Let's make open-source science better.
