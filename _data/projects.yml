@@ -3,8 +3,12 @@
 #   blurb    – one-line description
 #   section  – tiles are grouped under a heading per section (in first-seen order)
 #   url      – main click target for the tile (optional; defaults to repo)
+#   icon     – app icon, path under /images/ (optional)
 #   repo     – GitHub link shown with the icon at the bottom of the tile (optional)
 #   repo_name – override the text next to the GitHub icon (optional)
+#
+# Apps published on open-bioware point `url` at their page there and carry an
+# `icon`. Unreleased ones have neither until they go public.
 
 # - title: "Comming soon"
 #   blurb: "..."
@@ -16,20 +20,19 @@
 - title: "UniOme"
   blurb: "Open-source interactive browser for prokaryote genome, proteome all in one place"
   section: "Biology tools"
-  url:
+  url: "https://yjzhng.github.io/open-bioware/apps/uniome/"
+  icon: "apps/uniome.png"
   repo: "https://github.com/yjzhng/UniOme"
 
 - title: "OmicExplorer"
   blurb: "Intuitive workflow editor for omic analysis and visualisation pipelines"
   section: "Biology tools"
-  url:
-  repo: "https://github.com/yjzhng/OmicExplorer"
+  # Not public yet: no url/repo/icon, so the tile shows "Coming soon".
 
 - title: "BioGrapher"
   blurb: "Open-source data processing and plotting app for biologists"
   section: "Biology tools"
-  url:
-  repo: "https://github.com/yjzhng/BioGrapher"
+  # Not public yet: no url/repo/icon, so the tile shows "Coming soon".
 
 # - title: "BioViewer"
 #   blurb: "Open-source biomolecular structure viewer with useful labelling tools"
@@ -40,13 +43,15 @@
 - title: "ChemViewer"
   blurb: "Open-source chemical library viewer with basic chemoinformatic analyses"
   section: "Chemistry tools"
-  url:
+  url: "https://yjzhng.github.io/open-bioware/apps/chemviewer/"
+  icon: "apps/chemviewer.png"
   repo: "https://github.com/yjzhng/ChemViewer"
 
 - title: "ChemSketcher"
   blurb: "Open-source chemical drawing canvas with quick physchem properties"
   section: "Chemistry tools"
-  url:
+  url: "https://yjzhng.github.io/open-bioware/apps/chemsketcher/"
+  icon: "apps/chemsketcher.png"
   repo: "https://github.com/yjzhng/ChemSketcher"
 
 # - title: "KnwldgDB"

@@ -7,13 +7,19 @@ permalink: /projects/
 <h2>{{ section }}</h2>
 <div class="tiles">
 {% for p in site.data.projects %}{% if p.section == section %}
-  <div class="tile">
-    <h3><a href="{% if p.url %}{{ p.url }}{% else %}{{ p.repo }}{% endif %}">{{ p.title }}</a></h3>
+{% comment %} No url and no repo means nothing public to link to yet. {% endcomment %}
+{% assign released = false %}{% if p.url or p.repo %}{% assign released = true %}{% endif %}
+  <div class="tile{% unless released %} tile-unreleased{% endunless %}">
+    {% if p.icon %}<img class="tile-icon" src="{{ p.icon | prepend: '/images/' | relative_url }}" alt="" width="48" height="48" loading="lazy" decoding="async">
+    {% else %}<span class="tile-icon tile-icon-placeholder" aria-hidden="true"></span>{% endif %}
+    <h3>{% if released %}<a href="{% if p.url %}{{ p.url }}{% else %}{{ p.repo }}{% endif %}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
     <p>{{ p.blurb }}</p>
     {% if p.repo %}
     <a class="tile-repo" href="{{ p.repo }}" aria-label="GitHub repository for {{ p.title }}">
       <i class="fa-brands fa-github"></i><span>{{ p.repo_name | default: p.repo | split: "/" | last }}</span>
     </a>
+    {% elsif released == false %}
+    <span class="tile-soon">Coming soon</span>
     {% endif %}
   </div>
 {% endif %}{% endfor %}

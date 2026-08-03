@@ -12,11 +12,11 @@ author:
   bio: "Hello there!"
   location: "London, UK"
   employer: "The Francis Crick Institute"
-  email: "none@example.org"
-  googlescholar: "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  orcid: "https://orcid.org/yourorcidurl"
+  email: "yujia.zhang@crick.ac.uk"
+  googlescholar:                 # full profile URL; row hidden while unset
+  orcid:                         # full https://orcid.org/… URL; row hidden while unset
   github: "yjzhng"               # username
-  twitter: "yourhandle"          # X username, without the @
+  twitter:                       # X username, without the @; row hidden while unset
   uri: "https://yjzhng.github.io"  # personal website (globe icon)
 
 # --- Build ------------------------------------------------------------------

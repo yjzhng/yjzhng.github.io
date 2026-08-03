@@ -1,5 +1,5 @@
 # The following is the order of the links in the header of the website.
-# Three tabs: HOME (homepage), ACTIVITY (social feed), PROJECTS.
+# Two tabs: HOME (homepage), PROJECTS.
 
 main:
   - title: "HOME"
@@ -7,6 +7,3 @@ main:
 
   - title: "PROJECTS"
     url: /projects/
-
-  - title: "ACTIVITY"
-    url: /activity/

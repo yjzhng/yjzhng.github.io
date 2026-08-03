@@ -271,6 +271,9 @@ a { color: var(--link); }
 .tile {
   position: relative;
   aspect-ratio: 1 / 1;
+  /* Square by default, but grow rather than clip when a tile carries an icon
+     and a long blurb at the narrowest grid column. */
+  min-height: fit-content;
   display: flex;
   flex-direction: column;
   padding: 1.15rem;
@@ -285,6 +288,42 @@ a { color: var(--link); }
   transform: translateY(-4px);
   box-shadow: var(--shadow);
   border-color: var(--accent);
+}
+
+.tile-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.6rem;
+  border-radius: 11px;
+  object-fit: contain;
+  flex: none;
+}
+
+/* Unreleased app: nothing to click, so drop the hover affordance. */
+.tile-unreleased { border-style: dashed; }
+
+.tile-unreleased:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--border);
+}
+
+.tile-icon-placeholder {
+  display: block;
+  border: 1px dashed var(--border);
+  background: none;
+}
+
+.tile-soon {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .tile h3 {

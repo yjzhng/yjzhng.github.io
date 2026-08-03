@@ -14,9 +14,8 @@ template — rebuilt from scratch to keep only the navbar + sidebar layout.
 | --- | --- |
 | `index.md` | **HOME** tab (`/`) — bio |
 | `projects.html` | **PROJECTS** tab (`/projects/`) — tiles from `_data/projects.yml` |
-| `activity.html` | **ACTIVITY** tab (`/activity/`) — social feed embed |
 | `_data/projects.yml` | the project tiles (one entry each) |
-| `_data/navigation.yml` | the three top-bar tabs |
+| `_data/navigation.yml` | the top-bar tabs |
 | `_config.yml` | site title + `author:` sidebar info |
 | `_layouts/default.html` | the page shell |
 | `_includes/` | `head`, `masthead` (navbar), `sidebar`, `footer` |
