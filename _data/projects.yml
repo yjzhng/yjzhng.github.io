@@ -35,7 +35,9 @@
   blurb: "Intuitive workflow editor for omic analysis and visualisation pipelines"
   section: "Biology tools"
   # Repo is public; no open-bioware page yet, so the tile links to GitHub.
-  # Icon taken from build-resources/icon.png in the repo, scaled 1024 -> 256.
+  # Icon from build-resources/icon.png in the repo. That art has ~11% transparent
+  # padding the other icons lack, so it is cropped to the artwork then scaled to
+  # 256 — otherwise it renders visibly smaller than its neighbours.
   icon: "apps/omicexplorer.png"
   repo: "https://github.com/yjzhng/OmicExplorer"
 
