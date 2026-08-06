@@ -24,10 +24,20 @@
   icon: "apps/uniome.png"
   repo: "https://github.com/yjzhng/UniOme"
 
+- title: "prokDB"
+  blurb: "One merged gene-annotation table for any prokaryote, from NCBI, UniProt and KEGG"
+  section: "Biology tools"
+  url: "https://yjzhng.github.io/open-bioware/apps/prokdb/"
+  icon: "apps/prokdb.png"
+  repo: "https://github.com/yjzhng/prokDB"
+
 - title: "OmicExplorer"
   blurb: "Intuitive workflow editor for omic analysis and visualisation pipelines"
   section: "Biology tools"
-  # Not public yet: no url/repo/icon, so the tile shows "Coming soon".
+  # Repo is public; no open-bioware page yet, so the tile links to GitHub.
+  # Icon taken from build-resources/icon.png in the repo, scaled 1024 -> 256.
+  icon: "apps/omicexplorer.png"
+  repo: "https://github.com/yjzhng/OmicExplorer"
 
 - title: "BioGrapher"
   blurb: "Open-source data processing and plotting app for biologists"
