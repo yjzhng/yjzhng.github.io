@@ -261,9 +261,15 @@ a { color: var(--link); }
 
 /* ---- Project tiles ------------------------------------------------------- */
 
+/* Fit as many tiles per row as the width allows, but never more than four.
+   The column floor is whichever is larger: --tile-min, or the width four
+   columns would need — so a wide enough row lands on exactly four, and a
+   narrower one drops to three, two, one. Tiles are square, so the floor also
+   sets their height; it has to stay large enough for a blurb to fit. */
 .tiles {
+  --tile-min: 210px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--tile-min), (100% - 3rem) / 4), 1fr));
   gap: 1rem;
   margin: 0.5rem 0 2rem;
 }
@@ -271,9 +277,6 @@ a { color: var(--link); }
 .tile {
   position: relative;
   aspect-ratio: 1 / 1;
-  /* Square by default, but grow rather than clip when a tile carries an icon
-     and a long blurb at the narrowest grid column. */
-  min-height: fit-content;
   display: flex;
   flex-direction: column;
   padding: 1.15rem;
@@ -299,14 +302,16 @@ a { color: var(--link); }
   flex: none;
 }
 
-/* Unreleased app: nothing to click, so drop the hover affordance. */
-.tile-unreleased { border-style: dashed; }
-
-.tile-unreleased:hover {
+/* No app page to open, so the tile as a whole isn't a link: drop the hover
+   affordance. Any GitHub link inside it stays clickable on its own. */
+.tile-flat:hover {
   transform: none;
   box-shadow: none;
   border-color: var(--border);
 }
+
+/* Nothing public at all yet. */
+.tile-unreleased { border-style: dashed; }
 
 .tile-icon-placeholder {
   display: block;
@@ -351,6 +356,13 @@ a { color: var(--link); }
   font-size: 0.85rem;
   line-height: 1.45;
   color: var(--muted);
+  /* A square tile can't grow, so cap the blurb with an ellipsis rather than let
+     overflow:hidden slice a line in half. Slack at the sizes above — it only
+     engages if a blurb gets much longer or a tile much narrower. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 /* GitHub repo link sits at the bottom, above the stretched title link */

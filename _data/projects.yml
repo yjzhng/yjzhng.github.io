@@ -17,6 +17,25 @@
 #   repo: "https://github.com/yjzhng/coming-soon"
 
 
+- title: "BioGrapher"
+  blurb: "Open-source data processing and plotting app for biologists"
+  section: "Biology tools"
+  url: "https://yjzhng.github.io/open-bioware/apps/biographer/"
+  # Icon from build/icon.png in the repo, cropped to the artwork and scaled to 256.
+  # Equivalent to the one now on the app page, from a higher-resolution source.
+  icon: "apps/biographer.png"
+  repo: "https://github.com/yjzhng/BioGrapher"
+
+- title: "OmicExplorer"
+  blurb: "Intuitive workflow editor for omic analysis and visualisation pipelines"
+  section: "Biology tools"
+  url: "https://yjzhng.github.io/open-bioware/apps/omicexplorer/"
+  # Icon predates the open-bioware page and came from build-resources/icon.png in
+  # the repo, cropped to the artwork (that source carries transparent padding the
+  # other icons lack) and scaled to 256. Matches the icon now on the app page.
+  icon: "apps/omicexplorer.png"
+  repo: "https://github.com/yjzhng/OmicExplorer"
+
 - title: "UniOme"
   blurb: "Open-source interactive browser for prokaryote genome, proteome all in one place"
   section: "Biology tools"
@@ -30,21 +49,6 @@
   url: "https://yjzhng.github.io/open-bioware/apps/prokdb/"
   icon: "apps/prokdb.png"
   repo: "https://github.com/yjzhng/prokDB"
-
-- title: "OmicExplorer"
-  blurb: "Intuitive workflow editor for omic analysis and visualisation pipelines"
-  section: "Biology tools"
-  # Repo is public; no open-bioware page yet, so the tile links to GitHub.
-  # Icon from build-resources/icon.png in the repo. That art has ~11% transparent
-  # padding the other icons lack, so it is cropped to the artwork then scaled to
-  # 256 — otherwise it renders visibly smaller than its neighbours.
-  icon: "apps/omicexplorer.png"
-  repo: "https://github.com/yjzhng/OmicExplorer"
-
-- title: "BioGrapher"
-  blurb: "Open-source data processing and plotting app for biologists"
-  section: "Biology tools"
-  # Not public yet: no url/repo/icon, so the tile shows "Coming soon".
 
 # - title: "BioViewer"
 #   blurb: "Open-source biomolecular structure viewer with useful labelling tools"
